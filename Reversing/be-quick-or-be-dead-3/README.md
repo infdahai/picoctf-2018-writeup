@@ -11,7 +11,9 @@ Reversing
 >How do you speed up a very repetitive computation?
 
 ## Solution
-Unsolved.
+Use memoization, to solve the recursive function, and patch the binary. Script [solve.py](solution/solve.py)
+
+Run the patched binary to get the flag
 
 ### Flag
-`flag`
+`picoCTF{dynamic_pr0gramming_ftw_a0b0b7f8}`

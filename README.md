@@ -123,7 +123,7 @@ Although it states that I may do some of the writeups for the forensics challeng
 |[quackme](Reversing/quackme)|200|Solved|
 |[assembly-2](Reversing/assembly-2)|250|Solved|
 |[be-quick-or-be-dead-2](Reversing/be-quick-or-be-dead-2)|275|Solved|
-|[be-quick-or-be-dead-3](Reversing/be-quick-or-be-dead-3)|350|Unsolved|
+|[be-quick-or-be-dead-3](Reversing/be-quick-or-be-dead-3)|350|Solved|
 |[quackme up](Reversing/quackme%20up)|350|Unsolved|
 |[Radix's Terminal](Reversing/Radix%27s%20Terminal)|400|Solved|
 |[assembly-3](Reversing/assembly-3)|400|Solved|
