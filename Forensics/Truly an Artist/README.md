@@ -17,3 +17,6 @@ To do.
 
 ### Flag
 `flag`
+
+
+strings 秒杀
