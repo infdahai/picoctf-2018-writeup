@@ -35,3 +35,7 @@ b4,abgr,msb,xy      .. text: "EO%O#/c/2/C_e_q"
 
 ### Flag
 `picoCTF{r34d1ng_b37w33n_7h3_by73s}`
+
+
+
+使用stegsolver GUI export .bin文件，得知flag
