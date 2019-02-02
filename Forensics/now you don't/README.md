@@ -27,7 +27,7 @@ To do.
 
 ```shell
 exiftool nowYouDont.png
-magick convert nowYouDont.png canvas:"#91202" pure.png
+magick convert nowYouDont.png canvas:"#912020" pure.png
 rm pure-*
 magick compare nowYouDont.png pure.png diff.png
 ```
