@@ -22,4 +22,12 @@ To do.
 
 ## ps  
 使用stegsolve Image combiner中，在Mul发现可以看出
-在red plane 0 也可直接看出。这题strings 无效
+在red plane 0 也可直接看出。这题strings 无效.用Magick尝试也不行
+
+
+```shell
+exiftool nowYouDont.png
+magick convert nowYouDont.png canvas:"#91202" pure.png
+rm pure-*
+magick compare nowYouDont.png pure.png diff.png
+```
