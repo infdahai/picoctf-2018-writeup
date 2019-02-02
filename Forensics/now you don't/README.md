@@ -22,3 +22,4 @@ To do.
 
 ## ps  
 使用stegsolve Image combiner中，在Mul发现可以看出
+在red plane 0 也可直接看出。这题strings 无效
