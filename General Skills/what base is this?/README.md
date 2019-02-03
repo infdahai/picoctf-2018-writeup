@@ -19,7 +19,7 @@ Convert to ASCII for the respective bases. Python or online tools can be used to
 2. Convert from hex
 3. Convert from octal
 
-Working solution [solve.py](solution/solve.py).
+Working solution [solve.py](solution/solve.py).  and a shell test.py [a.py](solution/a.py).
 
 ### Flag
 `picoCTF{delusions_about_finding_values_451a9a74}`
