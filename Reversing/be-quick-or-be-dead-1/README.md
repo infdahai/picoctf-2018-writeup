@@ -134,3 +134,6 @@ https://tcode2k16.github.io/blog/posts/picoctf-2018-writeup/reversing/#be-quick-
 
 ```
 感觉把set_timer中nop去掉酒醒，不过r2还没怎么学过
+
+
+用ida也可以干，https://pwnthemole.github.io/reverse/2018/10/18/PicoCTF2018-be-quick-or-be-dead.html
