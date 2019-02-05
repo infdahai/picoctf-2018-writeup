@@ -50,3 +50,6 @@ Patched binary [be-quick-or-be-dead-1_patched](solution/be-quick-or-be-dead-1_pa
 
 ### Flag
 `picoCTF{why_bother_doing_unnecessary_computation_27f28e71}`
+
+
+https://tcode2k16.github.io/blog/posts/picoctf-2018-writeup/reversing/#be-quick-or-be-dead-1
