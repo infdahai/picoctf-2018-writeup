@@ -137,4 +137,4 @@ https://tcode2k16.github.io/blog/posts/picoctf-2018-writeup/reversing/#be-quick-
 
 
 用ida也可以干，https://pwnthemole.github.io/reverse/2018/10/18/PicoCTF2018-be-quick-or-be-dead.html
-我用ida试过了，但是得到.ida文件不知道如何转化为.elf执行。 [.ida](be-quick-or-be-dead-1.i64)
+我用ida试过了，但是得到.ida文件不知道如何转化为.elf执行。 [.ida](./files/be-quick-or-be-dead-1.i64)
