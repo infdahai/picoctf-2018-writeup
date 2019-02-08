@@ -194,7 +194,8 @@ And there we go. This took me 1 whole day to solve. I hate reversing.
 
 
 
-``‵asm
+```asm
+
 [0x080484e0]> pdf @sym.do_magic
 / (fcn) sym.do_magic 211
 |   sym.do_magic ();
@@ -277,7 +278,6 @@ And there we go. This took me 1 whole day to solve. I hate reversing.
 |    |      ; CODE XREF from sym.do_magic (0x8048705)
 |    `----> 0x08048713      c9             leave
 \           0x08048714      c3             ret
-
 ```
 
 这是一个完整的循环，从0x0804870b-0x08048711可看出，索引为eax
