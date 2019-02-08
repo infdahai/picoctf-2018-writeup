@@ -191,3 +191,39 @@ And there we go. This took me 1 whole day to solve. I hate reversing.
 
 ### Flag
 `picoCTF{qu4ckm3_5f8d9c17}`
+
+
+
+``‵assembly
+      .--> 0x080486bd      8b45e8         mov eax, dword [var_18h]
+|      :|   0x080486c0      0558880408     add eax, obj.sekrutBuffer   ; 0x8048858 ; ")\x06\x16O+50\x1eQ\x1b[\x14K\b]+VGWP\x16MQQ]"
+|      :|   0x080486c5      0fb608         movzx ecx, byte [eax]
+|      :|   0x080486c8      8b55e8         mov edx, dword [var_18h]
+|      :|   0x080486cb      8b45ec         mov eax, dword [var_14h]
+|      :|   0x080486ce      01d0           add eax, edx
+|      :|   0x080486d0      0fb600         movzx eax, byte [eax]
+|      :|   0x080486d3      31c8           xor eax, ecx
+|      :|   0x080486d5      8845e3         mov byte [var_1dh], al
+|      :|   0x080486d8      8b1538a00408   mov edx, dword obj.greetingMessage ; [0x804a038:4]=0x80487f0 str.You_have_now_entered_the_Duck_Web__and_you_re_in_for_a_honkin__good_time.__Can_you_figure_out_my_trick
+|      :|   0x080486de      8b45e8         mov eax, dword [var_18h]
+|      :|   0x080486e1      01d0           add eax, edx
+|      :|   0x080486e3      0fb600         movzx eax, byte [eax]
+|      :|   0x080486e6      3a45e3         cmp al, byte [var_1dh]
+|     ,===< 0x080486e9      7504           jne 0x80486ef
+|     |:|   0x080486eb      8345e401       add dword [var_1ch], 1
+|     |:|   ; CODE XREF from sym.do_magic (0x80486e9)
+|     `---> 0x080486ef      837de419       cmp dword [var_1ch], 0x19
+|     ,===< 0x080486f3      7512           jne 0x8048707
+|     |:|   0x080486f5      83ec0c         sub esp, 0xc
+|     |:|   0x080486f8      68ab880408     push str.You_are_winner     ; 0x80488ab ; "You are winner!"
+|     |:|   0x080486fd      e86efdffff     call sym.imp.puts           ; int puts(const char *s)
+|     |:|   0x08048702      83c410         add esp, 0x10
+|    ,====< 0x08048705      eb0c           jmp 0x8048713
+|    ||:|   ; CODE XREF from sym.do_magic (0x80486f3)
+|    |`---> 0x08048707      8345e801       add dword [var_18h], 1
+|    | :|   ; CODE XREF from sym.do_magic (0x80486bb)
+|    | :`-> 0x0804870b      8b45e8         mov eax, dword [var_18h]
+|    | :    0x0804870e      3b45f0         cmp eax, dword [var_10h]
+|    | `==< 0x08048711      7caa           jl 0x80486bd
+```
+这是一个完整的循环，从0x0804870b-0x08048711可看出，索引为eax
