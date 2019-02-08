@@ -136,7 +136,7 @@ Putting everything together, it is trying to loop through every character in the
 
 Writing some pseudo code, it will look something like this
 
-```
+```cpp
 count = 0
 for (i = 0; i < length_of_user_input; i++) {
 	data = user_input[i] xor binary_data[i]
@@ -194,7 +194,7 @@ And there we go. This took me 1 whole day to solve. I hate reversing.
 
 
 
-``‵assembly
+``‵asm
       .--> 0x080486bd      8b45e8         mov eax, dword [var_18h]
 |      :|   0x080486c0      0558880408     add eax, obj.sekrutBuffer   ; 0x8048858 ; ")\x06\x16O+50\x1eQ\x1b[\x14K\b]+VGWP\x16MQQ]"
 |      :|   0x080486c5      0fb608         movzx ecx, byte [eax]
