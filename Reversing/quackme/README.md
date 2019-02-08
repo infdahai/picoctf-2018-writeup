@@ -294,3 +294,16 @@ for i in range(len(xor_msg)):
 print(flag)
 ```
 flag显示为`picCTF{u4cm3_3524I994`,为了括号闭合，计算`chr(ord('}')^ord(']'))`得出是空格。因此我将原来init_msg下划线全变成空格。
+
+最后的脚本就是下面这样了。为去掉多余空格，已经可以正常得到结果
+```python
+xor_msg = ")\x06\x16O+50\x1eQ\x1b[\x14K\x08]+VGWP\x16MQQ]"
+init_msg ="You_have_now_entered_the_Duck_Web__and_you_re_in_for_a_honkin__good_time.__Can_you_figure_out_my_trick"
+init_msg = init_msg.replace('_',' ')
+
+flag=''
+for i in range(len(xor_msg)):
+    flag += chr(ord(init_msg[i])^ord(xor_msg[i]))
+
+print(flag)
+```
