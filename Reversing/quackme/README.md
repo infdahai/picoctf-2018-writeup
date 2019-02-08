@@ -195,8 +195,56 @@ And there we go. This took me 1 whole day to solve. I hate reversing.
 
 
 ``‵asm
-
-      .--> 0x080486bd      8b45e8         mov eax, dword [var_18h]
+[0x080484e0]> pdf @sym.do_magic
+/ (fcn) sym.do_magic 211
+|   sym.do_magic ();
+|           ; var int var_1dh @ ebp-0x1d
+|           ; var int var_1ch @ ebp-0x1c
+|           ; var int var_18h @ ebp-0x18
+|           ; var int var_14h @ ebp-0x14
+|           ; var int var_10h @ ebp-0x10
+|           ; var int var_ch @ ebp-0xc
+|           ; CALL XREF from sym.main (0x804874a)
+|           0x08048642      55             push ebp
+|           0x08048643      89e5           mov ebp, esp
+|           0x08048645      83ec28         sub esp, 0x28               ; '('
+|           0x08048648      e88effffff     call sym.read_input
+|           0x0804864d      8945ec         mov dword [var_14h], eax
+|           0x08048650      83ec0c         sub esp, 0xc
+|           0x08048653      ff75ec         push dword [var_14h]
+|           0x08048656      e835feffff     call sym.imp.strlen         ; size_t strlen(const char *s)
+|           0x0804865b      83c410         add esp, 0x10
+|           0x0804865e      8945f0         mov dword [var_10h], eax
+|           0x08048661      8b45f0         mov eax, dword [var_10h]
+|           0x08048664      83c001         add eax, 1
+|           0x08048667      83ec0c         sub esp, 0xc
+|           0x0804866a      50             push eax
+|           0x0804866b      e8f0fdffff     call sym.imp.malloc         ;  void *malloc(size_t size)
+|           0x08048670      83c410         add esp, 0x10
+|           0x08048673      8945f4         mov dword [var_ch], eax
+|           0x08048676      837df400       cmp dword [var_ch], 0
+|       ,=< 0x0804867a      751a           jne 0x8048696
+|       |   0x0804867c      83ec0c         sub esp, 0xc
+|       |   0x0804867f      6884880408     push str.malloc___returned_NULL._Out_of_Memory ; 0x8048884 ; "malloc() returned NULL. Out of Memory\n"
+|       |   0x08048684      e8e7fdffff     call sym.imp.puts           ; int puts(const char *s)
+|       |   0x08048689      83c410         add esp, 0x10
+|       |   0x0804868c      83ec0c         sub esp, 0xc
+|       |   0x0804868f      6aff           push 0xffffffffffffffff
+|       |   0x08048691      e8eafdffff     call sym.imp.exit           ; void exit(int status)
+|       |   ; CODE XREF from sym.do_magic (0x804867a)
+|       `-> 0x08048696      8b45f0         mov eax, dword [var_10h]
+|           0x08048699      83c001         add eax, 1
+|           0x0804869c      83ec04         sub esp, 4
+|           0x0804869f      50             push eax
+|           0x080486a0      6a00           push 0
+|           0x080486a2      ff75f4         push dword [var_ch]
+|           0x080486a5      e816feffff     call sym.imp.memset         ; void *memset(void *s, int c, size_t n)
+|           0x080486aa      83c410         add esp, 0x10
+|           0x080486ad      c745e4000000.  mov dword [var_1ch], 0
+|           0x080486b4      c745e8000000.  mov dword [var_18h], 0
+|       ,=< 0x080486bb      eb4e           jmp 0x804870b
+|       |   ; CODE XREF from sym.do_magic (0x8048711)
+|      .--> 0x080486bd      8b45e8         mov eax, dword [var_18h]
 |      :|   0x080486c0      0558880408     add eax, obj.sekrutBuffer   ; 0x8048858 ; ")\x06\x16O+50\x1eQ\x1b[\x14K\b]+VGWP\x16MQQ]"
 |      :|   0x080486c5      0fb608         movzx ecx, byte [eax]
 |      :|   0x080486c8      8b55e8         mov edx, dword [var_18h]
@@ -226,6 +274,9 @@ And there we go. This took me 1 whole day to solve. I hate reversing.
 |    | :`-> 0x0804870b      8b45e8         mov eax, dword [var_18h]
 |    | :    0x0804870e      3b45f0         cmp eax, dword [var_10h]
 |    | `==< 0x08048711      7caa           jl 0x80486bd
+|    |      ; CODE XREF from sym.do_magic (0x8048705)
+|    `----> 0x08048713      c9             leave
+\           0x08048714      c3             ret
 
 ```
 
