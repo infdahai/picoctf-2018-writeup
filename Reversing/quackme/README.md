@@ -178,7 +178,7 @@ print flag
 
 And we get the flag! Just to confirm, we can pass the flag into the binary
 
-```
+```shell
 $ ./main 
 You have now entered the Duck Web, and you're in for a honkin' good time.
 Can you figure out my trick?
@@ -195,6 +195,7 @@ And there we go. This took me 1 whole day to solve. I hate reversing.
 
 
 ``‵asm
+
       .--> 0x080486bd      8b45e8         mov eax, dword [var_18h]
 |      :|   0x080486c0      0558880408     add eax, obj.sekrutBuffer   ; 0x8048858 ; ")\x06\x16O+50\x1eQ\x1b[\x14K\b]+VGWP\x16MQQ]"
 |      :|   0x080486c5      0fb608         movzx ecx, byte [eax]
@@ -225,5 +226,7 @@ And there we go. This took me 1 whole day to solve. I hate reversing.
 |    | :`-> 0x0804870b      8b45e8         mov eax, dword [var_18h]
 |    | :    0x0804870e      3b45f0         cmp eax, dword [var_10h]
 |    | `==< 0x08048711      7caa           jl 0x80486bd
+
 ```
+
 这是一个完整的循环，从0x0804870b-0x08048711可看出，索引为eax
