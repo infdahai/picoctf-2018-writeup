@@ -23,3 +23,6 @@ Working solution [solve.py](solution/solve.py)
 
 ### Flag
 `picoCTF{e_w4y_t00_sm411_81b6559f}`
+
+
+https://github.com/shiltemann/CTF-writeups-public/tree/master/PicoCTF_2018#binary-exploitation-250-buffer-overflow-2
