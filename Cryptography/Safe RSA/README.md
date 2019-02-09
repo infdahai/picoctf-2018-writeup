@@ -26,3 +26,4 @@ Working solution [solve.py](solution/solve.py)
 
 
 https://github.com/shiltemann/CTF-writeups-public/tree/master/PicoCTF_2018#binary-exploitation-250-buffer-overflow-2
+https://tcode2k16.github.io/blog/posts/picoctf-2018-writeup/cryptography/#rsa-madlibs
