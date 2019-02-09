@@ -23,3 +23,7 @@ Unsolved.
 
 ### Flag
 `flag`
+
+参考:
+https://github.com/shiltemann/CTF-writeups-public/tree/master/PicoCTF_2018#forensics-250-ext-super-magic
+https://tcode2k16.github.io/blog/posts/picoctf-2018-writeup/forensics/#ext-super-magic
