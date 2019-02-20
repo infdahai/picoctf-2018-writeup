@@ -22,3 +22,4 @@ Working solution [solve.py](solution/solve.py)
 
 
 web_site_tools:https://www.alpertron.com.ar/ECM.HTM
+the reference of coding : https://github.com/shiltemann/CTF-writeups-public/tree/master/PicoCTF_2018#cryptography-350-super-safe-rsa
